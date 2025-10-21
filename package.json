@@ -1,27 +1,55 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "maristela-godoy",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Leticia Godoy <let.godoy.contato@gmail.com>",
   "dependencies": {
-    "gatsby": "^5.14.1",
-    "gatsby-plugin-image": "^3.14.0",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-sharp": "^5.14.0",
-    "gatsby-source-filesystem": "^5.14.0",
-    "gatsby-transformer-sharp": "^5.14.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "gatsby": "^5.15.0",
+    "gatsby-plugin-image": "^3.15.0",
+    "gatsby-plugin-manifest": "^5.15.0",
+    "gatsby-plugin-sharp": "^5.15.0",
+    "gatsby-source-filesystem": "^5.15.0",
+    "gatsby-transformer-sharp": "^5.15.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "@eslint/js": "^9.38.0",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "prettier": "^2.8.8"
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "psicologia",
+    "terapia",
+    "terapia sistêmica",
+    "terapia de família",
+    "terapia de casal",
+    "terapia de grupo",
+    "terapia de família",
+    "terapia de casal",
+    "terapia de grupo",
+    "psicóloga",
+    "psicólogo",
+    "psicóloga especializada em EMDR",
+    "psicólogo especializado em EMDR",
+    "psicóloga especializada em terapia sistêmica",
+    "psicólogo especializado em terapia sistêmica",
+    "psicóloga especializada em terapia de família",
+    "psicólogo especializado em terapia de família",
+    "psicóloga especializada em terapia de casal"
   ],
   "license": "0BSD",
   "scripts": {
@@ -32,13 +60,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "lint:check": "eslint src --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "type-check": "tsc --noEmit"
   }
 }

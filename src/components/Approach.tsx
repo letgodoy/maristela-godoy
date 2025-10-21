@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './Approach.module.css'
 
-const Approach = () => {
+const Approach: React.FC = () => {
   return (
     <section id="abordagem" className={styles.approach}>
       <div className={styles.container}>

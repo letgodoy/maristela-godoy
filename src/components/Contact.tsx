@@ -1,78 +1,49 @@
 import React from 'react'
-import * as styles from './Footer.module.css'
+import * as styles from './Contact.module.css'
 
-const Footer = () => {
+const Contact: React.FC = () => {
   return (
-    <footer className={styles.footer}>
+    <section id="contato" className={styles.contact}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.footerInfo}>
-            <h3 className={styles.footerTitle}>Maristela Godoy</h3>
-            <p className={styles.footerDescription}>
-              Psicóloga especializada em EMDR, oferecendo suporte emocional e
-              psicológico com uma abordagem humanizada e inclusiva.
-            </p>
-          </div>
+          <h1 className={styles.title}>Entre em Contato</h1>
+          <p className={styles.description}>
+            Estou aqui para ajudar você em sua jornada de autoconhecimento e
+            bem-estar. Entre em contato e vamos conversar sobre como posso te
+            apoiar.
+          </p>
+        </div>
 
-          <div className={styles.footerLinks}>
-            <h4 className={styles.linksTitle}>Navegação</h4>
-            <ul className={styles.linksList}>
-              <li>
-                <a href="#home" className={styles.footerLink}>
-                  Início
-                </a>
-              </li>
-              <li>
-                <a href="#sobre-mim" className={styles.footerLink}>
-                  Sobre mim
-                </a>
-              </li>
-              <li>
-                <a href="#abordagem" className={styles.footerLink}>
-                  Abordagem
-                </a>
-              </li>
-              <li>
-                <a href="#depoimentos" className={styles.footerLink}>
-                  Depoimentos
-                </a>
-              </li>
-              <li>
-                <a href="#contato" className={styles.footerLink}>
-                  Contato
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.footerContact}>
-            <h4 className={styles.contactTitle}>Contato</h4>
-            <div className={styles.contactInfo}>
-              <p className={styles.contactItem}>
-                <span className={styles.contactLabel}>WhatsApp:</span>
-                +55 51 99808-5759
-              </p>
-              <p className={styles.contactItem}>
-                <span className={styles.contactLabel}>Localização:</span>
-                Rio Grande do Sul
-              </p>
+        <div className={styles.contactInfo}>
+          <div className={styles.contactCard}>
+            <div className={styles.contactIcon}>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
             </div>
+            <h3 className={styles.contactTitle}>WhatsApp</h3>
+            <p className={styles.contactText}>+55 51 99808-5759</p>
+          </div>
+
+          <div className={styles.contactCard}>
+            <div className={styles.contactIcon}>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+            </div>
+            <h3 className={styles.contactTitle}>Localização</h3>
+            <p className={styles.contactText}>Rio Grande do Sul</p>
           </div>
         </div>
 
-        <div className={styles.footerBottom}>
-          <div className={styles.copyright}>
-            <p>
-              © {new Date().getFullYear()} Maristela Godoy. Todos os direitos
-              reservados.
-            </p>
-          </div>
-          <div className={styles.socialLinks}>
+        <div className={styles.socialLinks}>
+          <h3 className={styles.socialTitle}>Siga-me nas redes sociais</h3>
+          <div className={styles.socialButtons}>
             <a
               href="https://www.facebook.com/maristelagodoy"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.socialLink}
+              className={styles.socialButton}
               aria-label="Facebook"
             >
               <svg viewBox="0 0 24 24" fill="currentColor">
@@ -83,7 +54,7 @@ const Footer = () => {
               href="https://www.instagram.com/maristelagodoy"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.socialLink}
+              className={styles.socialButton}
               aria-label="Instagram"
             >
               <svg viewBox="0 0 24 24" fill="currentColor">
@@ -94,7 +65,7 @@ const Footer = () => {
               href="https://wa.me/5511999999999"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.socialLink}
+              className={styles.socialButton}
               aria-label="WhatsApp"
             >
               <svg viewBox="0 0 24 24" fill="currentColor">
@@ -104,8 +75,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </section>
   )
 }
 
-export default Footer
+export default Contact

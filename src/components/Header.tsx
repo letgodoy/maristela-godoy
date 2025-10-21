@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import * as styles from './Header.module.css'
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header
       id="masthead"

@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './About.module.css'
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <section id="sobre-mim" className={styles.about}>
       <div className={styles.container}>

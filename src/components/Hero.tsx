@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import * as styles from './Hero.module.css'
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.container}>

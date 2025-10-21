@@ -8,7 +8,11 @@
 import * as React from 'react'
 import './layout.css'
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: React.ReactNode
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div
       style={{

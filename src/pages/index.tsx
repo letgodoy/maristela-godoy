@@ -9,7 +9,7 @@ import Testimonials from '../components/Testimonials'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
   return (
     <Layout>
       <Seo title="Maristela Godoy - Psicóloga" />

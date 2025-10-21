@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './Testimonials.module.css'
 
-const Testimonials = () => {
+const Testimonials: React.FC = () => {
   return (
     <section id="depoimentos" className={styles.testimonials}>
       <div className={styles.container}>
