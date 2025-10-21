@@ -6,6 +6,8 @@
  */
 
 import * as React from 'react'
+import { Box } from '@chakra-ui/react'
+import { ChakraProviderWrapper } from './chakra-provider'
 import './layout.css'
 
 interface LayoutProps {
@@ -14,15 +16,15 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: `var(--size-content)`,
-        padding: `var(--size-gutter)`,
-      }}
-    >
-      {children}
-    </div>
+    <ChakraProviderWrapper>
+      <Box
+        margin="0 auto"
+        maxWidth="var(--size-content)"
+        padding="var(--size-gutter)"
+      >
+        {children}
+      </Box>
+    </ChakraProviderWrapper>
   )
 }
 

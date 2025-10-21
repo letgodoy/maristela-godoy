@@ -1,162 +1,157 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import * as styles from './Header.module.css'
+import {
+  Box,
+  Flex,
+  HStack,
+  Container,
+  Link as ChakraLink,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  useColorModeValue,
+  useBreakpointValue,
+} from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 const Header: React.FC = () => {
+  const isMobile = useBreakpointValue({ base: true, md: false })
+  const bg = useColorModeValue('white', 'gray.800')
+  const color = useColorModeValue('gray.800', 'white')
+
+  const menuItems = [
+    { label: 'Início', href: '/' },
+    { label: 'Sobre mim', href: '#sobre-mim' },
+    { label: 'Abordagem', href: '#abordagem' },
+    { label: 'Depoimentos', href: '#depoimentos' },
+    { label: 'Contato', href: '#contato' },
+  ]
+
+  const socialLinks = [
+    {
+      name: 'Facebook',
+      href: 'https://www.facebook.com/maristelagodoy',
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17 3v2h-2c-0.552 0-1.053 0.225-1.414 0.586s-0.586 0.862-0.586 1.414v3c0 0.552 0.448 1 1 1h2.719l-0.5 2h-2.219c-0.552 0-1 0.448-1 1v7h-2v-7c0-0.552-0.448-1-1-1h-2v-2h2c0.552 0 1-0.448 1-1v-3c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172zM18 1h-3c-1.657 0-3.158 0.673-4.243 1.757s-1.757 2.586-1.757 4.243v2h-2c-0.552 0-1 0.448-1 1v4c0 0.552 0.448 1 1 1h2v7c0 0.552 0.448 1 1 1h4c0.552 0 1-0.448 1-1v-7h2c0.466 0 0.858-0.319 0.97-0.757l1-4c0.134-0.536-0.192-1.079-0.728-1.213-0.083-0.021-0.167-0.031-0.242-0.030h-3v-2h3c0.552 0 1-0.448 1-1v-4c0-0.552-0.448-1-1-1z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/maristelagodoy',
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 1c-1.657 0-3.158 0.673-4.243 1.757s-1.757 2.586-1.757 4.243v10c0 1.657 0.673 3.158 1.757 4.243s2.586 1.757 4.243 1.757h10c1.657 0 3.158-0.673 4.243-1.757s1.757-2.586 1.757-4.243v-10c0-1.657-0.673-3.158-1.757-4.243s-2.586-1.757-4.243-1.757zM7 3h10c1.105 0 2.103 0.447 2.828 1.172s1.172 1.723 1.172 2.828v10c0 1.105-0.447 2.103-1.172 2.828s-1.723 1.172-2.828 1.172h-10c-1.105 0-2.103-0.447-2.828-1.172s-1.172-1.723-1.172-2.828v-10c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172z" />
+        </svg>
+      ),
+    },
+    {
+      name: 'WhatsApp',
+      href: 'https://wa.me/5551998085759',
+      icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347" />
+        </svg>
+      ),
+    },
+  ]
+
   return (
-    <header
-      id="masthead"
-      className="site-header"
-      role="banner"
-      itemType="https://schema.org/WPHeader"
-      itemScope=""
+    <Box
+      as="header"
+      bg={bg}
+      color={color}
+      boxShadow="sm"
+      position="sticky"
+      top={0}
+      zIndex={1000}
     >
-      <div id="main-header" className="site-header-wrap">
-        <div className="site-header-inner-wrap">
-          <div className="site-header-upper-wrap">
-            <div className="site-header-upper-inner-wrap">
-              <div className="site-main-header-wrap site-header-row-container site-header-focus-item site-header-row-layout-standard">
-                <div className="site-header-row-container-inner">
-                  <div className="site-container">
-                    <div className="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
-                      <div className="site-header-main-section-left site-header-section site-header-section-left">
-                        <div className="site-header-item site-header-focus-item">
-                          <div className="site-branding branding-layout-standard site-brand-logo-only">
-                            <Link
-                              className="brand has-logo-image"
-                              to="/"
-                              aria-label="Maristela Godoy"
-                            >
-                              <StaticImage
-                                src="../images/logo-maristela.png"
-                                alt="Maristela Godoy"
-                                className="custom-logo"
-                                width={200}
-                                height={200}
-                                placeholder="blurred"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                        <div className="site-header-item site-header-focus-item site-header-item-main-navigation header-navigation-layout-stretch-false header-navigation-layout-fill-stretch-false">
-                          <nav
-                            id="site-navigation"
-                            className="main-navigation header-navigation nav--toggle-sub header-navigation-style-standard header-navigation-dropdown-animation-none"
-                            role="navigation"
-                            aria-label="Primary Navigation"
-                          >
-                            <div className="primary-menu-container header-menu-container">
-                              <ul id="primary-menu" className="menu">
-                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item current_page_item">
-                                  <Link to="/" aria-current="page">
-                                    Início
-                                  </Link>
-                                </li>
-                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                                  <a href="#sobre-mim">Sobre mim</a>
-                                </li>
-                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                                  <a href="#abordagem">Abordagem</a>
-                                </li>
-                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                                  <a href="#depoimentos">Depoimentos</a>
-                                </li>
-                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
-                                  <a href="#contato">Contato</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </nav>
-                        </div>
-                      </div>
-                      <div className="site-header-main-section-right site-header-section site-header-section-right">
-                        <div className="site-header-item site-header-focus-item">
-                          <div className="header-social-wrap">
-                            <div className="header-social-inner-wrap element-social-inner-wrap social-show-label-false social-style-filled">
-                              <a
-                                href="https://www.facebook.com/maristelagodoy"
-                                aria-label="Facebook"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-button header-social-item social-link-facebook"
-                              >
-                                <span className="kadence-svg-iconset">
-                                  <svg
-                                    className="kadence-svg-icon kadence-facebook-alt-svg"
-                                    fill="currentColor"
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path d="M17 3v2h-2c-0.552 0-1.053 0.225-1.414 0.586s-0.586 0.862-0.586 1.414v3c0 0.552 0.448 1 1 1h2.719l-0.5 2h-2.219c-0.552 0-1 0.448-1 1v7h-2v-7c0-0.552-0.448-1-1-1h-2v-2h2c0.552 0 1-0.448 1-1v-3c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172zM18 1h-3c-1.657 0-3.158 0.673-4.243 1.757s-1.757 2.586-1.757 4.243v2h-2c-0.552 0-1 0.448-1 1v4c0 0.552 0.448 1 1 1h2v7c0 0.552 0.448 1 1 1h4c0.552 0 1-0.448 1-1v-7h2c0.466 0 0.858-0.319 0.97-0.757l1-4c0.134-0.536-0.192-1.079-0.728-1.213-0.083-0.021-0.167-0.031-0.242-0.030h-3v-2h3c0.552 0 1-0.448 1-1v-4c0-0.552-0.448-1-1-1z"></path>
-                                  </svg>
-                                </span>
-                              </a>
-                              <a
-                                href="https://www.instagram.com/maristelagodoy"
-                                aria-label="Instagram"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-button header-social-item social-link-instagram"
-                              >
-                                <span className="kadence-svg-iconset">
-                                  <svg
-                                    className="kadence-svg-icon kadence-instagram-svg"
-                                    fill="currentColor"
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path d="M7 1c-1.657 0-3.158 0.673-4.243 1.757s-1.757 2.586-1.757 4.243v10c0 1.657 0.673 3.158 1.757 4.243s2.586 1.757 4.243 1.757h10c1.657 0 3.158-0.673 4.243-1.757s1.757-2.586 1.757-4.243v-10c0-1.657-0.673-3.158-1.757-4.243s-2.586-1.757-4.243-1.757zM7 3h10c1.105 0 2.103 0.447 2.828 1.172s1.172 1.723 1.172 2.828v10c0 1.105-0.447 2.103-1.172 2.828s-1.723 1.172-2.828 1.172h-10c-1.105 0-2.103-0.447-2.828-1.172s-1.172-1.723-1.172-2.828v-10c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172zM16.989 11.223c-0.15-0.972-0.571-1.857-1.194-2.567-0.754-0.861-1.804-1.465-3.009-1.644-0.464-0.074-0.97-0.077-1.477-0.002-1.366 0.202-2.521 0.941-3.282 1.967s-1.133 2.347-0.93 3.712 0.941 2.521 1.967 3.282 2.347 1.133 3.712 0.93 2.521-0.941 3.282-1.967 1.133-2.347 0.93-3.712zM15.011 11.517c0.122 0.82-0.1 1.609-0.558 2.227s-1.15 1.059-1.969 1.18-1.609-0.1-2.227-0.558-1.059-1.15-1.18-1.969 0.1-1.609 0.558-2.227 1.15-1.059 1.969-1.18c0.313-0.046 0.615-0.042 0.87-0.002 0.255 0.04 0.5 0.1 0.73 0.18 0.23 0.08 0.44 0.18 0.64 0.3 0.2 0.12 0.38 0.26 0.54 0.42 0.16 0.16 0.3 0.34 0.42 0.54 0.12 0.2 0.22 0.41 0.3 0.64 0.08 0.23 0.14 0.47 0.18 0.72 0.04 0.25 0.06 0.5 0.06 0.75 0 0.25-0.02 0.5-0.06 0.75-0.04 0.25-0.1 0.49-0.18 0.72-0.08 0.23-0.18 0.44-0.3 0.64-0.12 0.2-0.26 0.38-0.42 0.54-0.16 0.16-0.34 0.3-0.54 0.42-0.2 0.12-0.41 0.22-0.64 0.3-0.23 0.08-0.47 0.14-0.72 0.18-0.25 0.04-0.5 0.06-0.75 0.06s-0.5-0.02-0.75-0.06c-0.25-0.04-0.49-0.1-0.72-0.18-0.23-0.08-0.44-0.18-0.64-0.3-0.2-0.12-0.38-0.26-0.54-0.42-0.16-0.16-0.3-0.34-0.42-0.54-0.12-0.2-0.22-0.41-0.3-0.64-0.08-0.23-0.14-0.47-0.18-0.72-0.04-0.25-0.06-0.5-0.06-0.75 0-0.25 0.02-0.5 0.06-0.75 0.04-0.25 0.1-0.49 0.18-0.72 0.08-0.23 0.18-0.44 0.3-0.64 0.12-0.2 0.26-0.38 0.42-0.54 0.16-0.16 0.34-0.3 0.54-0.42 0.2-0.12 0.41-0.22 0.64-0.3 0.23-0.08 0.47-0.14 0.72-0.18 0.25-0.04 0.5-0.06 0.75-0.06zM12 8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zM12 14c-1.105 0-2-0.895-2-2s0.895-2 2-2 2 0.895 2 2-0.895 2-2 2zM17.5 7.5c-0.552 0-1-0.448-1-1s0.448-1 1-1 1 0.448 1 1-0.448 1-1 1z"></path>
-                                  </svg>
-                                </span>
-                              </a>
-                              <a
-                                href="https://wa.me/5551998085759"
-                                aria-label="WhatsApp"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="social-button header-social-item social-link-whatsapp"
-                              >
-                                <span className="kadence-svg-iconset">
-                                  <svg
-                                    className="kadence-svg-icon kadence-whatsapp-svg"
-                                    fill="currentColor"
-                                    version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"></path>
-                                  </svg>
-                                </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="site-header-item site-header-focus-item">
-                          <div className="header-button-wrap">
-                            <a href="#contato" className="button header-button">
-                              Entre em contato
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+      <Container maxW="container.xl">
+        <Flex align="center" justify="space-between" py={4}>
+          {/* Logo */}
+          <Link to="/">
+            <StaticImage
+              src="../images/logo.png"
+              alt="Maristela Godoy"
+              width={120}
+              height={120}
+              placeholder="blurred"
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          {!isMobile && (
+            <HStack spacing={8}>
+              {menuItems.map(item => (
+                <ChakraLink
+                  key={item.label}
+                  href={item.href}
+                  _hover={{ color: 'blue.500' }}
+                  fontWeight="medium"
+                >
+                  {item.label}
+                </ChakraLink>
+              ))}
+            </HStack>
+          )}
+
+          {/* Social Links & CTA */}
+          <HStack spacing={4}>
+            {/* Social Links */}
+            <HStack spacing={2}>
+              {socialLinks.map(social => (
+                <ChakraLink
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
+                  _hover={{ color: 'blue.500' }}
+                >
+                  {social.icon}
+                </ChakraLink>
+              ))}
+            </HStack>
+
+            {/* CTA Button */}
+            <ChakraLink
+              href="#contato"
+              bg="blue.500"
+              color="white"
+              px={6}
+              py={2}
+              borderRadius="md"
+              fontWeight="medium"
+              _hover={{ bg: 'blue.600' }}
+            >
+              Entre em contato
+            </ChakraLink>
+
+            {/* Mobile Menu */}
+            {isMobile && (
+              <Menu>
+                <MenuButton
+                  as={IconButton}
+                  icon={<HamburgerIcon />}
+                  variant="ghost"
+                />
+                <MenuList>
+                  {menuItems.map(item => (
+                    <MenuItem key={item.label} as={ChakraLink} href={item.href}>
+                      {item.label}
+                    </MenuItem>
+                  ))}
+                </MenuList>
+              </Menu>
+            )}
+          </HStack>
+        </Flex>
+      </Container>
+    </Box>
   )
 }
 
