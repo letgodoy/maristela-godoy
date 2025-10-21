@@ -1,0 +1,139 @@
+/* About Section */
+.about {
+  padding: 100px 0;
+  background: var(--color-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.content {
+  margin-bottom: 80px;
+}
+
+.textContent {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  color: #2c2c2c;
+  margin: 0 0 40px 0;
+  font-weight: 700;
+  font-family: var(--font-serif);
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 0 30px 0;
+  font-family: var(--font-sans);
+}
+
+.infoBoxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: #f8f5f0;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoBox:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.infoTitle {
+  font-size: 20px;
+  color: #2c2c2c;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.infoText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .infoBoxes {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .infoBox {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .icon {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .infoBox {
+    padding: 20px;
+  }
+}

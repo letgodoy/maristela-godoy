@@ -1,0 +1,146 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  padding: 100px 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--color-gray);
+  font-style: italic;
+  margin: 0;
+  font-weight: 400;
+  font-family: var(--font-sans);
+}
+
+.title {
+  font-size: 64px;
+  color: #2c2c2c;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: var(--font-serif);
+}
+
+.greetingBlock {
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid var(--color-primary);
+}
+
+.greeting {
+  font-size: 24px;
+  color: var(--color-primary);
+  margin: 0 0 20px 0;
+  font-weight: 600;
+  font-family: var(--font-sans);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+  text-align: justify;
+  font-family: var(--font-sans);
+}
+
+.imageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.imageWrapper {
+  margin: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+    min-height: 100vh;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .greetingBlock {
+    padding-left: 0;
+    border-left: none;
+    border-top: 3px solid var(--color-primary);
+    padding-top: 20px;
+  }
+
+  .description {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .greeting {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}

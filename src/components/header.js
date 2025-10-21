@@ -1,32 +1,163 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import * as styles from './Header.module.css'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `space-between`,
-    }}
-  >
-    <Link
-      to="/"
-      style={{
-        fontSize: `var(--font-sm)`,
-        textDecoration: `none`,
-      }}
+const Header = () => {
+  return (
+    <header
+      id="masthead"
+      className="site-header"
+      role="banner"
+      itemType="https://schema.org/WPHeader"
+      itemScope=""
     >
-      {siteTitle}
-    </Link>
-    <img
-      alt="Gatsby logo"
-      height={20}
-      style={{ margin: 0 }}
-      src="data:image/svg+xml,%3Csvg fill='none' viewBox='0 0 107 28' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3CclipPath id='a'%3E%3Cpath d='m0 0h106.1v28h-106.1z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cg fill='%23000'%3E%3Cpath clip-rule='evenodd' d='m89 11.7c-.8 0-2.2.2-3.2 1.6v-8.10005h-2.8v16.80005h2.7v-1.3c1.1 1.5 2.6 1.5999 3.2 1.5999 3 0 5-2.2999 5-5.2999s-2-5.3-4.9-5.3zm-.7 2.5c1.7 0 2.8 1.2 2.8 2.8s-1.2 2.8-2.8 2.8c-1.7 0-2.8-1.2-2.8-2.8s1.1-2.8 2.8-2.8z' fill-rule='evenodd'/%3E%3Cpath d='m71.2 21.9999v-7.6h1.9v-2.4h-1.9v-3.40005h-2.8v3.40005h-1.1v2.4h1.1v7.6z'/%3E%3Cpath clip-rule='evenodd' d='m65.6999 12h-2.9v1.3c-.8999-1.5-2.4-1.6-3.2-1.6-2.9 0-4.8999 2.4-4.8999 5.3s1.9999 5.2999 5.0999 5.2999c.8 0 2.1001-.0999 3.1001-1.5999v1.3h2.7999zm-5.1999 7.8c-1.7001 0-2.8-1.2-2.8-2.8s1.2-2.8 2.8-2.8c1.7 0 2.7999 1.2 2.7999 2.8s-1.1999 2.8-2.7999 2.8z' fill-rule='evenodd'/%3E%3Cpath d='m79.7001 14.4c-.7-.6-1.3-.7-1.6-.7-.7 0-1.1.3-1.1.8 0 .3.1.6.9.9l.7.2c.1261.0472.2621.0945.4037.1437.7571.2632 1.6751.5823 2.0963 1.2563.3.4.5 1 .5 1.7 0 .9-.3 1.8-1.1 2.5s-1.8 1.0999-3 1.0999c-2.1 0-3.2-.9999-3.9-1.6999l1.5-1.7c.6.6 1.4 1.2 2.2 1.2s1.4-.4 1.4-1.1c0-.6-.5-.9-.9-1l-.6-.2c-.0687-.0295-.1384-.0589-.2087-.0887l-.0011-.0004c-.6458-.2729-1.3496-.5704-1.8902-1.1109-.5-.5-.8-1.1-.8-1.9 0-1 .5-1.8 1-2.3.8-.6 1.8-.7 2.6-.7.7 0 1.9.1 3.2 1.1z'/%3E%3Cpath d='m98.5 20.5-4.8-8.5h3.3l3.1 5.7 2.8-5.7h3.2l-8 15.3h-3.2z'/%3E%3Cpath d='m47 13.7h7c0 .0634.01.1267.0206.1932.0227.1435.0477.3018-.0206.5068 0 4.5-3.4 8.1-8 8.1s-8-3.6-8-8.1c0-4.49995 3.6-8.09995 8-8.09995 2.6 0 5 1.2 6.5 3.3l-2.3 1.49995c-1-1.29995-2.6-2.09995-4.2-2.09995-2.9 0-4.9 2.49995-4.9 5.39995s2.1 5.3 5 5.3c2.6 0 4-1.3 4.6-3.2h-3.7z'/%3E%3C/g%3E%3Cpath d='m18 14h7c0 5.2-3.7 9.6-8.5 10.8l-13.19995-13.2c1.1-4.9 5.5-8.6 10.69995-8.6 3.7 0 6.9 1.8 8.9 4.5l-1.5 1.3c-1.7-2.3-4.4-3.8-7.4-3.8-3.9 0-7.29995 2.5-8.49995 6l11.49995 11.5c2.9-1 5.1-3.5 5.8-6.5h-4.8z' fill='%23fff'/%3E%3Cpath d='m6.2 21.7001c-2.1-2.1-3.2-4.8-3.2-7.6l10.8 10.8c-2.7 0-5.5-1.1-7.6-3.2z' fill='%23fff'/%3E%3Cpath d='m14 0c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14-6.3-14-14-14zm-7.8 21.8c-2.1-2.1-3.2-4.9-3.2-7.6l10.9 10.8c-2.8-.1-5.6-1.1-7.7-3.2zm10.2 2.9-13.1-13.1c1.1-4.9 5.5-8.6 10.7-8.6 3.7 0 6.9 1.8 8.9 4.5l-1.5 1.3c-1.7-2.3-4.4-3.8-7.4-3.8-3.9 0-7.2 2.5-8.5 6l11.5 11.5c2.9-1 5.1-3.5 5.8-6.5h-4.8v-2h7c0 5.2-3.7 9.6-8.6 10.7z' fill='%237026b9'/%3E%3C/g%3E%3C/svg%3E"
-    />
-  </header>
-)
+      <div id="main-header" className="site-header-wrap">
+        <div className="site-header-inner-wrap">
+          <div className="site-header-upper-wrap">
+            <div className="site-header-upper-inner-wrap">
+              <div className="site-main-header-wrap site-header-row-container site-header-focus-item site-header-row-layout-standard">
+                <div className="site-header-row-container-inner">
+                  <div className="site-container">
+                    <div className="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
+                      <div className="site-header-main-section-left site-header-section site-header-section-left">
+                        <div className="site-header-item site-header-focus-item">
+                          <div className="site-branding branding-layout-standard site-brand-logo-only">
+                            <Link
+                              className="brand has-logo-image"
+                              to="/"
+                              aria-label="Maristela Godoy"
+                            >
+                              <StaticImage
+                                src="../images/logo-maristela.png"
+                                alt="Maristela Godoy"
+                                className="custom-logo"
+                                width={200}
+                                height={200}
+                                placeholder="blurred"
+                              />
+                            </Link>
+                          </div>
+                        </div>
+                        <div className="site-header-item site-header-focus-item site-header-item-main-navigation header-navigation-layout-stretch-false header-navigation-layout-fill-stretch-false">
+                          <nav
+                            id="site-navigation"
+                            className="main-navigation header-navigation nav--toggle-sub header-navigation-style-standard header-navigation-dropdown-animation-none"
+                            role="navigation"
+                            aria-label="Primary Navigation"
+                          >
+                            <div className="primary-menu-container header-menu-container">
+                              <ul id="primary-menu" className="menu">
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item current_page_item">
+                                  <Link to="/" aria-current="page">
+                                    Início
+                                  </Link>
+                                </li>
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
+                                  <a href="#sobre-mim">Sobre mim</a>
+                                </li>
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
+                                  <a href="#abordagem">Abordagem</a>
+                                </li>
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
+                                  <a href="#depoimentos">Depoimentos</a>
+                                </li>
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom">
+                                  <a href="#contato">Contato</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                        </div>
+                      </div>
+                      <div className="site-header-main-section-right site-header-section site-header-section-right">
+                        <div className="site-header-item site-header-focus-item">
+                          <div className="header-social-wrap">
+                            <div className="header-social-inner-wrap element-social-inner-wrap social-show-label-false social-style-filled">
+                              <a
+                                href="https://www.facebook.com/maristelagodoy"
+                                aria-label="Facebook"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-button header-social-item social-link-facebook"
+                              >
+                                <span className="kadence-svg-iconset">
+                                  <svg
+                                    className="kadence-svg-icon kadence-facebook-alt-svg"
+                                    fill="currentColor"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path d="M17 3v2h-2c-0.552 0-1.053 0.225-1.414 0.586s-0.586 0.862-0.586 1.414v3c0 0.552 0.448 1 1 1h2.719l-0.5 2h-2.219c-0.552 0-1 0.448-1 1v7h-2v-7c0-0.552-0.448-1-1-1h-2v-2h2c0.552 0 1-0.448 1-1v-3c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172zM18 1h-3c-1.657 0-3.158 0.673-4.243 1.757s-1.757 2.586-1.757 4.243v2h-2c-0.552 0-1 0.448-1 1v4c0 0.552 0.448 1 1 1h2v7c0 0.552 0.448 1 1 1h4c0.552 0 1-0.448 1-1v-7h2c0.466 0 0.858-0.319 0.97-0.757l1-4c0.134-0.536-0.192-1.079-0.728-1.213-0.083-0.021-0.167-0.031-0.242-0.030h-3v-2h3c0.552 0 1-0.448 1-1v-4c0-0.552-0.448-1-1-1z"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                              <a
+                                href="https://www.instagram.com/maristelagodoy"
+                                aria-label="Instagram"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-button header-social-item social-link-instagram"
+                              >
+                                <span className="kadence-svg-iconset">
+                                  <svg
+                                    className="kadence-svg-icon kadence-instagram-svg"
+                                    fill="currentColor"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path d="M7 1c-1.657 0-3.158 0.673-4.243 1.757s-1.757 2.586-1.757 4.243v10c0 1.657 0.673 3.158 1.757 4.243s2.586 1.757 4.243 1.757h10c1.657 0 3.158-0.673 4.243-1.757s1.757-2.586 1.757-4.243v-10c0-1.657-0.673-3.158-1.757-4.243s-2.586-1.757-4.243-1.757zM7 3h10c1.105 0 2.103 0.447 2.828 1.172s1.172 1.723 1.172 2.828v10c0 1.105-0.447 2.103-1.172 2.828s-1.723 1.172-2.828 1.172h-10c-1.105 0-2.103-0.447-2.828-1.172s-1.172-1.723-1.172-2.828v-10c0-1.105 0.447-2.103 1.172-2.828s1.723-1.172 2.828-1.172zM16.989 11.223c-0.15-0.972-0.571-1.857-1.194-2.567-0.754-0.861-1.804-1.465-3.009-1.644-0.464-0.074-0.97-0.077-1.477-0.002-1.366 0.202-2.521 0.941-3.282 1.967s-1.133 2.347-0.93 3.712 0.941 2.521 1.967 3.282 2.347 1.133 3.712 0.93 2.521-0.941 3.282-1.967 1.133-2.347 0.93-3.712zM15.011 11.517c0.122 0.82-0.1 1.609-0.558 2.227s-1.15 1.059-1.969 1.18-1.609-0.1-2.227-0.558-1.059-1.15-1.18-1.969 0.1-1.609 0.558-2.227 1.15-1.059 1.969-1.18c0.313-0.046 0.615-0.042 0.87-0.002 0.255 0.04 0.5 0.1 0.73 0.18 0.23 0.08 0.44 0.18 0.64 0.3 0.2 0.12 0.38 0.26 0.54 0.42 0.16 0.16 0.3 0.34 0.42 0.54 0.12 0.2 0.22 0.41 0.3 0.64 0.08 0.23 0.14 0.47 0.18 0.72 0.04 0.25 0.06 0.5 0.06 0.75 0 0.25-0.02 0.5-0.06 0.75-0.04 0.25-0.1 0.49-0.18 0.72-0.08 0.23-0.18 0.44-0.3 0.64-0.12 0.2-0.26 0.38-0.42 0.54-0.16 0.16-0.34 0.3-0.54 0.42-0.2 0.12-0.41 0.22-0.64 0.3-0.23 0.08-0.47 0.14-0.72 0.18-0.25 0.04-0.5 0.06-0.75 0.06s-0.5-0.02-0.75-0.06c-0.25-0.04-0.49-0.1-0.72-0.18-0.23-0.08-0.44-0.18-0.64-0.3-0.2-0.12-0.38-0.26-0.54-0.42-0.16-0.16-0.3-0.34-0.42-0.54-0.12-0.2-0.22-0.41-0.3-0.64-0.08-0.23-0.14-0.47-0.18-0.72-0.04-0.25-0.06-0.5-0.06-0.75 0-0.25 0.02-0.5 0.06-0.75 0.04-0.25 0.1-0.49 0.18-0.72 0.08-0.23 0.18-0.44 0.3-0.64 0.12-0.2 0.26-0.38 0.42-0.54 0.16-0.16 0.34-0.3 0.54-0.42 0.2-0.12 0.41-0.22 0.64-0.3 0.23-0.08 0.47-0.14 0.72-0.18 0.25-0.04 0.5-0.06 0.75-0.06zM12 8c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zM12 14c-1.105 0-2-0.895-2-2s0.895-2 2-2 2 0.895 2 2-0.895 2-2 2zM17.5 7.5c-0.552 0-1-0.448-1-1s0.448-1 1-1 1 0.448 1 1-0.448 1-1 1z"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                              <a
+                                href="https://wa.me/5551998085759"
+                                aria-label="WhatsApp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="social-button header-social-item social-link-whatsapp"
+                              >
+                                <span className="kadence-svg-iconset">
+                                  <svg
+                                    className="kadence-svg-icon kadence-whatsapp-svg"
+                                    fill="currentColor"
+                                    version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"></path>
+                                  </svg>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="site-header-item site-header-focus-item">
+                          <div className="header-button-wrap">
+                            <a href="#contato" className="button header-button">
+                              Entre em contato
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  )
+}
 
 export default Header

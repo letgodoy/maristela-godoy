@@ -1,0 +1,175 @@
+/* Header Styles */
+.site-header {
+  background: var(--color-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(139, 90, 60, 0.1);
+}
+
+.site-header-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.site-header-inner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+}
+
+.site-main-header-inner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.site-header-main-section-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.site-branding {
+  flex-shrink: 0;
+}
+
+.brand {
+  display: block;
+  text-decoration: none;
+}
+
+.custom-logo {
+  max-height: 60px;
+  width: auto;
+}
+
+/* Navigation */
+.main-navigation {
+  display: flex;
+}
+
+.primary-menu-container {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  padding: 12px 0;
+  font-family: var(--font-sans);
+}
+
+.menu-item a:hover,
+.menu-item.current-menu-item a {
+  color: var(--color-primary);
+}
+
+/* Social Links */
+.site-header-main-section-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-social-wrap {
+  display: flex;
+}
+
+.header-social-inner-wrap {
+  display: flex;
+  gap: 15px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+  background: var(--color-secondary);
+}
+
+.kadence-svg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Button */
+.header-button-wrap {
+  display: flex;
+}
+
+.button {
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--color-secondary);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .site-header-inner-wrap {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .site-header-main-section-left {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .site-header-main-section-right {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .header-social-inner-wrap {
+    justify-content: center;
+  }
+}
