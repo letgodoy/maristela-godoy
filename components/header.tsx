@@ -6,6 +6,7 @@ import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { publicUrl } from "@/lib/public-url";
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
@@ -41,7 +42,7 @@ export function Header() {
           {/* Logo */}
           <Link href="#inicio" className="flex items-center gap-2">
             <Image
-              src="/images/logo.png"
+              src={publicUrl('/images/logo.png')}
               alt="Maristela Godoy - Psicóloga"
               width={50}
               height={50}

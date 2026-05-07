@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Instagram, Heart } from "lucide-react";
 import Image from "next/image";
+import { publicUrl } from "@/lib/public-url";
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
@@ -22,7 +23,7 @@ export function Footer() {
               className="font-serif text-2xl font-bold flex items-center gap-2"
             >
               <Image
-                src="/images/logo.png"
+                src={publicUrl('/images/logo.png')}
                 alt="Maristela Godoy - Psicóloga"
                 width={30}
                 height={30}

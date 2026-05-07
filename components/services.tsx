@@ -1,28 +1,29 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { publicUrl } from "@/lib/public-url";
 
 const services = [
   {
-    image: '/images/te-ind.jpeg',
+    image: publicUrl('/images/te-ind.jpeg'),
     title: 'Terapia Individual',
     description:
       'A Terapia Sistêmica individual pode ajudar o indivíduo a reconhecer como seu histórico familiar, relacionamentos e experiências moldaram sua identidade e seu modo de agir.',
   },
   {
-    image: '/images/te-casal.jpeg',
+    image: publicUrl('/images/te-casal.jpeg'),
     title: 'Terapia de Casal',
     description:
       'A terapia sistêmica de casal é uma abordagem eficaz para ajudar os parceiros a entenderem as complexidades de seu relacionamento e a desenvolverem novas habilidades e estratégias para melhorar a comunicação e o entendimento.',
   },
   {
-    image: '/images/te-familia.jpeg',
+    image: publicUrl('/images/te-familia.jpeg'),
     title: 'Terapia de Família',
     description:
       'A Terapia Familiar Sistêmica trabalha com a família como um todo, visando melhorar a comunicação, a resolução de conflitos e promover o bem-estar emocional e psicológico de todos os envolvidos.',
   },
   {
-    image: '/images/te-sistemica.jpeg',
+    image: publicUrl('/images/te-sistemica.jpeg'),
     title: 'Terapia Sistêmica',
     description:
       'A terapia sistêmica pode ser usada para tratar uma ampla variedade de questões, incluindo problemas de relacionamento, problemas familiares, transtornos alimentares, transtornos de ansiedade e depressão.',

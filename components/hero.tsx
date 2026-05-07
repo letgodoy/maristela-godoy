@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { publicUrl } from "@/lib/public-url";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -61,7 +62,7 @@ export function Hero() {
           <div className="order-1 md:order-2 flex justify-center md:justify-center">              
               <div className="rounded-2xl overflow-hidden shadow-2xl w-full" style={{ maxHeight: '70dvh', aspectRatio: '683/1024' }}>
                 <Image
-                  src="/images/hero.jpeg"
+                  src={publicUrl('/images/hero.jpeg')}
                   alt="Maristela Godoy - Psicóloga"
                   width={683}
                   height={1024}
