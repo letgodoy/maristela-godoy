@@ -40,9 +40,8 @@ export function Contact() {
               Se você deseja marcar um horário para uma sessão de psicologia ou
               tem alguma dúvida sobre o processo terapêutico, entre em contato
               comigo. Você pode marcar uma consulta prévia para conversarmos
-              sobre suas necessidades e expectativas em relação à terapia. Além
-              disso, você pode utilizar o formulário de contato presente em meu
-              site ou entrar em contato comigo pelo WhatsApp. Estou sempre
+              sobre suas necessidades e expectativas em relação à terapia. Você 
+              pode entrar em contato comigo pelo WhatsApp. Estou sempre
               disponível para ajudá-lo(a) da melhor forma possível.
             </p>
 
