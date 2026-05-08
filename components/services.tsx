@@ -56,7 +56,7 @@ export function Services() {
               className="group bg-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 flex flex-col"
             >
               <div className="w-full h-auto aspect-square rounded-xl bg-primary/10 flex items-center justify-center mb-5 relative">
-                <Image src={service.image} alt={service.title} className="object-cover" fill />
+                <Image src={service.image} alt={service.title} className="object-cover rounded-xl" fill />
               </div>
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                 {service.title}
