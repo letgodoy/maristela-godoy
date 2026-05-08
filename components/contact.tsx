@@ -1,33 +1,35 @@
-"use client";
+// "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+// import { useState } from "react";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Label } from "@/components/ui/label";
 import { MessageCircle, Send, Phone } from "lucide-react";
+import Image from "next/image";
+import { publicUrl } from "@/lib/public-url";
 
 export function Contact() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  //   // Simulate form submission
+  //   await new Promise((resolve) => setTimeout(resolve, 1000));
     
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+  //   setIsSubmitting(false);
+  //   setIsSubmitted(true);
+  // };
 
   return (
     <section id="contato" className="py-24 bg-card">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Column - Info */}
-          <div>
+        <div className="grid lg:grid-cols-2 gap-16 lg:items-stretch">
+          {/* Left Column - Info (define a altura da linha no desktop) */}
+          <div className="min-h-0">
             <span className="text-primary font-medium text-sm tracking-wide uppercase">
               Contato
             </span>
@@ -75,9 +77,9 @@ export function Contact() {
             </p>
           </div>
 
-          {/* Right Column - Form */}
-          {/* <div className="bg-background rounded-2xl p-8 shadow-lg border border-border/50">
-            {isSubmitted ? (
+          {/* Right Column - imagem preenche a altura da coluna esquerda */}
+          <div className="relative min-h-[600px] lg:min-h-0 lg:h-full overflow-hidden bg-background rounded-2xl shadow-lg border border-border/50">
+            {/* {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
                   <Send className="h-8 w-8 text-green-600" />
@@ -146,10 +148,19 @@ export function Contact() {
                   {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                 </Button>
               </form>
-            )}
-          </div> */}
+            )} */}
+
+            <Image
+              src={publicUrl('/images/depoimentos.jpeg')}
+              alt="Maristela Godoy - Psicóloga"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover object-center rounded-2xl min-h-[700px]"
+            />
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

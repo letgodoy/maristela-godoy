@@ -67,7 +67,7 @@ export function Hero() {
                   width={683}
                   height={1024}
                   priority
-                  className="object-cover"
+                  className="object-cover m-auto w-full"
                 />
               </div>
             </div>
