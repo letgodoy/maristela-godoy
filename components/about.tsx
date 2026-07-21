@@ -14,42 +14,49 @@ export function About() {
               Quem eu sou
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-pretty">
-              Uma doutoranda, intérprete de libras e psicóloga com experiência em
-              EMDR, que valoriza a diversidade cultural e viaja pelo mundo em
-              busca de conhecimento e ampliação de horizontes. Uma mentora pronta
-              para compartilhar suas experiências com o mundo.
+              Sou a Dra. Maristela de Godoy, psicóloga, intérprete de Língua
+              Brasileira de Sinais (Libras) e terapeuta comprometida com o
+              cuidado humanizado e a promoção da saúde mental. Minha atuação
+              profissional é guiada pelo respeito à singularidade de cada
+              pessoa, pela diversidade cultural e pela busca contínua de
+              conhecimento, sempre com o propósito de oferecer um atendimento
+              ético, acolhedor e baseado em evidências.
             </p>
 
             <div className="space-y-6 mb-10">
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                Atualmente me dedico ao meu doutorado na Unilasalle em Memória
-                Social e Bens Culturais, enquanto estou afastada do Instituto
-                Federal do Rio Grande do Sul, onde sou servidora. Minha trajetória
-                acadêmica é soma das graduações em Filosofia e Psicologia, bem
-                como da formação em Relações Familiares e de Casal, EMDR e o
-                mestrado em Filosofia. Além disso, sou intérprete de Língua
-                Brasileira de Sinais, com certificação pelo MEC, PROLIBRAS em
+                Atualmente, atuo na Universidade Federal da Integração
+                Latino-Americana (UNILA). Minha formação acadêmica reúne as
+                graduações em Filosofia e Psicologia, o mestrado em Filosofia, o
+                doutorado em Memória Social e Bens Culturais, além das formações
+                em Relações Familiares e de Casal e EMDR. Também sou intérprete
+                de Libras, certificada pelo MEC por meio do PROLIBRAS desde
                 2007.
               </p>
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                Com mais de uma década de experiência no exercício da psicologia,
-                pude atuar em diferentes contextos que contribuíram
-                significativamente para minha visão multicultural, tais como o
-                atendimento a pessoas com doenças mentais no Hospital Psiquiátrico
-                Bezerra de Menezes em Passo Fundo e o convívio com outras culturas
-                em países como Filipinas, Camboja e Guiné Bissau, África
-                Ocidental, onde também tive a oportunidade de ministrar aulas de
-                filosofia para os seminaristas da diocese de Bissau e Bafatá.
+                Com mais de dez anos de experiência na Psicologia, atuei em
+                diferentes contextos que ampliaram meu olhar sobre o ser humano.
+                Trabalhei no atendimento a pessoas com transtornos mentais no
+                Hospital Psiquiátrico Bezerra de Menezes, em Passo Fundo, e vivi
+                experiências interculturais em países como Filipinas, Camboja e
+                Guiné-Bissau, onde também ministrei aulas de Filosofia para
+                seminaristas das dioceses de Bissau e Bafatá.
               </p>
               <p className="text-muted-foreground leading-relaxed text-pretty">
-                Acredito que minha vivência multicultural é essencial para minha
-                atuação profissional, pois enriquece meu potencial em oferecer um
-                cuidado humano, ético e eficaz para o bem-estar psicológico de
-                meus pacientes. Sou uma terapeuta que combina diferentes
-                abordagens para melhor atender às necessidades dos meus pacientes.
-                A Terapia Sistêmica e o EMDR possuem objetivos e métodos
-                distintos, mas podem ser complementares no tratamento de questões
-                psicológicas.
+                Possuo formação para atuação psicológica em situações de
+                catástrofes e emergências humanitárias. Atuei no acolhimento
+                psicológico das populações atingidas pelas enchentes no Vale do
+                Taquari e, posteriormente, em Porto Alegre e municípios da
+                região metropolitana, oferecendo suporte emocional às pessoas
+                afetadas nesses momentos de grande vulnerabilidade.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-pretty">
+                Na clínica, trabalho de forma integrativa, utilizando abordagens
+                como a Terapia Sistêmica e o EMDR, que se complementam no
+                cuidado das questões emocionais, relacionais e dos traumas
+                psicológicos. Meu compromisso é oferecer um espaço seguro e
+                acolhedor, que favoreça o bem-estar, o autoconhecimento e o
+                desenvolvimento pessoal de cada paciente.
               </p>
             </div>
           </div>
@@ -73,11 +80,11 @@ export function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                  <span>Mestrado em Filosofia: Ética e Subjetividade</span>
+                  <span>Mestrado em Filosofia</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                  <span>Doutoranda em Memória Social e Bens Culturais</span>
+                  <span>Doutorado em Memória Social e Bens Culturais</span>
                 </li>
               </ul>
             </div>
@@ -95,7 +102,7 @@ export function About() {
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                  <span>Relações sistêmicas de casal, família e individual</span>
+                  <span>Relações Familiares e de Casal</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
@@ -103,7 +110,7 @@ export function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                  <span>Inclusão de deficientes</span>
+                  <span>Psicologia em catástrofes e emergências humanitárias</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
@@ -123,7 +130,7 @@ export function About() {
                 </h3>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Vivência multicultural em Filipinas, Camboja e Guiné Bissau,
+                Vivência intercultural em Filipinas, Camboja e Guiné-Bissau,
                 enriquecendo a prática terapêutica com uma visão global e
                 humanizada.
               </p>

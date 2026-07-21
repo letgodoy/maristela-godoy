@@ -61,13 +61,13 @@ export function Contact() {
                 </div>
               </div>
               <a
-                href="https://wa.me/5551998085759"
+                href="https://wa.me/5551982730771"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-foreground font-medium hover:text-primary transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                +55 51 99808-5759
+                +55 51 98273-0771
               </a>
             </div>
 
