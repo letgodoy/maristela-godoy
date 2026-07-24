@@ -36,7 +36,7 @@ export function Contact() {
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
               Vamos Conversar?
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8 text-pretty">
+            <p className="text-muted-foreground leading-relaxed mb-8 text-pretty text-justify">
               Se você deseja marcar um horário para uma sessão de psicologia ou
               tem alguma dúvida sobre o processo terapêutico, entre em contato
               comigo. Você pode marcar uma consulta prévia para conversarmos
@@ -61,17 +61,17 @@ export function Contact() {
                 </div>
               </div>
               <a
-                href="https://wa.me/5551982730771"
+                href="https://wa.me/5545991197554"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-foreground font-medium hover:text-primary transition-colors"
               >
                 <Phone className="h-4 w-4" />
-                +55 51 98273-0771
+                +55 45 99119-7554
               </a>
             </div>
 
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground text-justify">
               Atendimento online disponível para todo o Brasil.
             </p>
           </div>

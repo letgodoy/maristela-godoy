@@ -27,7 +27,7 @@ export function Hero() {
               <h2 className="text-xl md:text-2xl font-serif text-foreground/90">
                 Ei, tudo bem?
               </h2>
-              <p className="text-muted-foreground leading-relaxed text-pretty max-w-lg mx-auto lg:mx-0">
+              <p className="text-muted-foreground leading-relaxed text-pretty text-justify max-w-lg mx-auto lg:mx-0">
                 Se você está passando por um momento difícil e precisa de ajuda
                 para lidar com problemas emocionais ou psicológicos, eu estou
                 aqui para ajudar! Vamos bater um papo, tomar um café virtual e

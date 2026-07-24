@@ -60,7 +60,7 @@ export function Testimonials() {
             <Quote className="absolute top-6 left-6 h-10 w-10 text-primary/10" />
             
             <div className="text-center">
-              <p className="text-foreground text-lg md:text-xl leading-relaxed mb-8 text-pretty">
+              <p className="text-foreground text-lg md:text-xl leading-relaxed mb-8 text-pretty text-justify">
                 {testimonials[currentIndex].quote}
               </p>
               <div>

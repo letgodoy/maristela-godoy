@@ -42,7 +42,7 @@ export function Services() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
             Como posso te ajudar
           </h2>
-          <p className="text-muted-foreground leading-relaxed text-pretty">
+          <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
             Ofereço diferentes modalidades de atendimento para melhor atender às
             suas necessidades individuais, de relacionamento ou familiares.
           </p>
@@ -61,7 +61,7 @@ export function Services() {
               <h3 className="font-serif text-xl font-semibold text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed flex-grow text-pretty">
+              <p className="text-muted-foreground text-sm leading-relaxed flex-grow text-pretty text-justify">
                 {service.description}
               </p>
               <Button

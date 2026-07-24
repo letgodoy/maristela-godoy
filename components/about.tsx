@@ -13,7 +13,7 @@ export function About() {
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
               Quem eu sou
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-pretty">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-pretty text-justify">
               Sou a Dra. Maristela de Godoy, psicóloga, intérprete de Língua
               Brasileira de Sinais (Libras) e terapeuta comprometida com o
               cuidado humanizado e a promoção da saúde mental. Minha atuação
@@ -24,7 +24,7 @@ export function About() {
             </p>
 
             <div className="space-y-6 mb-10">
-              <p className="text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
                 Atualmente, atuo na Universidade Federal da Integração
                 Latino-Americana (UNILA). Minha formação acadêmica reúne as
                 graduações em Filosofia e Psicologia, o mestrado em Filosofia, o
@@ -33,7 +33,7 @@ export function About() {
                 de Libras, certificada pelo MEC por meio do PROLIBRAS desde
                 2007.
               </p>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
                 Com mais de dez anos de experiência na Psicologia, atuei em
                 diferentes contextos que ampliaram meu olhar sobre o ser humano.
                 Trabalhei no atendimento a pessoas com transtornos mentais no
@@ -42,7 +42,7 @@ export function About() {
                 Guiné-Bissau, onde também ministrei aulas de Filosofia para
                 seminaristas das dioceses de Bissau e Bafatá.
               </p>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
                 Possuo formação para atuação psicológica em situações de
                 catástrofes e emergências humanitárias. Atuei no acolhimento
                 psicológico das populações atingidas pelas enchentes no Vale do
@@ -50,7 +50,7 @@ export function About() {
                 região metropolitana, oferecendo suporte emocional às pessoas
                 afetadas nesses momentos de grande vulnerabilidade.
               </p>
-              <p className="text-muted-foreground leading-relaxed text-pretty">
+              <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
                 Na clínica, trabalho de forma integrativa, utilizando abordagens
                 como a Terapia Sistêmica e o EMDR, que se complementam no
                 cuidado das questões emocionais, relacionais e dos traumas
@@ -129,7 +129,7 @@ export function About() {
                   Experiência Internacional
                 </h3>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed text-justify">
                 Vivência intercultural em Filipinas, Camboja e Guiné-Bissau,
                 enriquecendo a prática terapêutica com uma visão global e
                 humanizada.

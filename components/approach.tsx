@@ -12,7 +12,7 @@ export function Approach() {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-2 mb-6">
             Abordagem
           </h2>
-          <p className="text-muted-foreground leading-relaxed text-pretty">
+          <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
             Como terapeuta, adoto uma abordagem integrativa para tratar as
             necessidades dos pacientes, o que é eficaz diante da complexidade
             das questões psicológicas. A Terapia Sistêmica e o EMDR são duas
@@ -33,14 +33,14 @@ export function Approach() {
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
               Terapia Sistêmica
             </h3>
-            <p className="text-muted-foreground leading-relaxed mb-6 text-pretty">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-pretty text-justify">
               A terapia sistêmica é uma abordagem terapêutica eficaz tanto no
               atendimento familiar como no individual. Ela se baseia no
               entendimento de que o indivíduo faz parte de um sistema maior,
               buscando compreender as relações familiares e padrões de
               comportamento que influenciam a vida do paciente.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-pretty">
+            <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
               O objetivo é promover mudanças, desenvolver novas formas de
               relacionamento e melhorar a comunicação, resultando em maior
               compreensão e empatia entre os membros da família.
@@ -55,12 +55,12 @@ export function Approach() {
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-4">
               EMDR
             </h3>
-            <p className="text-muted-foreground leading-relaxed mb-6 text-pretty">
+            <p className="text-muted-foreground leading-relaxed mb-6 text-pretty text-justify">
               A EMDR é uma técnica terapêutica utilizada para tratar transtornos
               relacionados ao estresse pós-traumático (TEPT) e outras condições
               associadas a memórias dolorosas.
             </p>
-            <p className="text-muted-foreground leading-relaxed text-pretty">
+            <p className="text-muted-foreground leading-relaxed text-pretty text-justify">
               Consiste na estimulação bilateral alternada dos hemisférios
               cerebrais por meio de movimentos oculares, sons ou toques, com o
               objetivo de integrar neuroquimicamente as memórias traumáticas e
